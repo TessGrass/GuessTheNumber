@@ -57,28 +57,31 @@ function StartGameScreen({ onPickNumber }) {
 export default StartGameScreen
 
 const styles = StyleSheet.create({
-    rootContainer: {
-      flex: 1,
-      marginTop: 100,
-      alignItems: 'center'
-    },
-    numberInput: {
-        height: 50,
-        width: 50,
-        textAlign: 'center',
-        fontSize: 32,
-        borderBottomColor: Colors.accent500,
-        borderBottomWidth: 2,
-        color: Colors.accent500,
-        marginVertical: 8,
-        fontWeight: 'bold'
-    },
-    buttonsContainer: {
-      flexDirection: "row",
-    },
+  rootContainer: {
+    flex: 1,
+    marginTop: 100,
+    alignItems: 'center'
+  },
+  numberInput: {
+      height: 50,
+      width: 50,
+      textAlign: 'center',
+      fontSize: 32,
+      borderBottomColor: Colors.accent500,
+      borderBottomWidth: 2,
+      color: Colors.accent500,
+      marginVertical: 8,
+      fontWeight: 'bold'
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
 
-    buttonContainer: {
-      flex: 1,
-    }
-
+  buttonContainer: {
+    flex: 1,
+  }
+      // flexDirection column is default
+    // justifyContent = position elements on the main axel
+    // alignItems = position elements on the cross axel
+    // flex 1: takes all available space
 })
