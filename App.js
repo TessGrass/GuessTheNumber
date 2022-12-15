@@ -1,9 +1,11 @@
 import { StyleSheet , ImageBackground, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
 import { useState } from 'react'
 import { useFonts } from 'expo-font'
 
 import AppLoading from 'expo-app-loading'
+/* import * as SplashScreen from 'expo-splash-screen'; */
 import StartGameScreen from './screens/StartGameScreen'
 import GameScreen from './screens/GameScreen'
 import GameOverScreen from './screens/GameOverScreen';
@@ -39,7 +41,7 @@ export default function App() {
     setGuessRounds(0)
   }
 
-  let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />
+  let screen = <StartGameScreen onPickNumber={pickedNumberHandler} /> // onPickNumber = "bridge between the components", pickedNumberHandler ="where to"
 
   if (userNumber) {
     screen = <GameScreen userNumber={userNumber} onGameOver={gameOverHandler} />
@@ -51,7 +53,7 @@ export default function App() {
 
   // safeAreaView makes sure that there is a distance between the top edge / nodge and the content
   return (
-    <LinearGradient  colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
+    <LinearGradient colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground 
       source={require('./assets/images/dices.png')} 
       resizeMode="cover" 

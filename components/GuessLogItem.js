@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Colors from '../constants/colors'
 
-function GuessLogItem ({guess}) {
+function GuessLogItem ({ guess }) {
   return (
         <View style={styles.listItem}>
             <Text style={styles.itemText}>Opponent's Guess: {guess}</Text>

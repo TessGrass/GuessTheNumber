@@ -27,7 +27,7 @@ function StartGameScreen({ onPickNumber }) {
       [{text: 'Okay', style: 'destructive', onPress: resetInputHandler }])
       return
     }
-      onPickNumber(chosenNumber)
+      onPickNumber(chosenNumber) // onPickNumber = "Bridge", chosenNumber "the value being sent"
   }
     return (
     <View style={styles.rootContainer}>

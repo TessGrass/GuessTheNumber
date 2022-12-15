@@ -26,7 +26,6 @@ function GameScreen({ userNumber, onGameOver }) {
   const initialGuess = generateRandomBetween(1, 100, userNumber) // Hardcoded min / max due to useEffect technically being executed after the function and therefor, when minNum and maxNum is equal (which is when the guess is correct), you'll end up in a maximal call stack.
   const [currentGuess, setCurrentGuess] = useState(initialGuess)
   const [guessRounds, setGuessRounds] = useState([initialGuess])
-  console.log(guessRounds.length)
 
   useEffect(() => {
     if (currentGuess === userNumber) {
@@ -63,10 +62,10 @@ function GameScreen({ userNumber, onGameOver }) {
   const guessRoundsListLength = guessRounds.length
   console.log('guess:' + guessRoundsListLength)
 
-
+  //bind.(this, 'lower) => pre-configure the parameters future value. This doesn't matter in this case cause it isnt used in the function.
   return (
     <View style={styles.screen}>
-        <Title>Opponents Guess</Title>
+{/*         <Title>Computer's Guess</Title> */}
         <NumberContainer>{currentGuess}</NumberContainer>
         <Card>
           <InstructionText style={styles.instructionText}>
