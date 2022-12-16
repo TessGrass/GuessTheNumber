@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-import { View, StyleSheet, Alert, ScrollView, Flatlist } from 'react-native'
+import { View, StyleSheet, Alert, ScrollView } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
-import Title from '../components/Title'
 import NumberContainer from '../components/NumberContainer'
 import PrimaryButton from '../components/PrimaryButton'
 import InstructionText from '../components/InstructionText'
@@ -58,9 +57,6 @@ function GameScreen({ userNumber, onGameOver }) {
     setCurrentGuess(newRndNumber)
     setGuessRounds(prevGuessRounds => [newRndNumber, ...prevGuessRounds])
   }
-
-  const guessRoundsListLength = guessRounds.length
-  console.log('guess:' + guessRoundsListLength)
 
   //bind.(this, 'lower) => pre-configure the parameters future value. This doesn't matter in this case cause it isnt used in the function.
   return (

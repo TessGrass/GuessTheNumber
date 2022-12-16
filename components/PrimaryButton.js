@@ -2,16 +2,12 @@ import { View, Text, Pressable, StyleSheet } from "react-native"
 import Colors from '../constants/colors'
 
 function PrimaryButton({ children, onPressed }) { // this is destruction, you could also write props and then write props.children in the text element.
-    function pressedButtonHandler() {
 
-
-    }
-   
     return (
       <View style={styles.buttonOuterContainer}>
         <Pressable 
           style={({ pressed }) => pressed ? [styles.buttonInnerContainer, styles.pressed] : styles.buttonInnerContainer}
-          onPress={onPressed} // onPressed is a prop in the <Pressable> component. OnPress points to a method (confirmInputHandler) found in StartGameScreen file.
+          onPress={onPressed} // onPress is a prop in the <Pressable> component. OnPress points to a method (confirmInputHandler) found in StartGameScreen file.
           android_ripple={{ color: Colors.primary600 }}>
           <Text style={styles.buttonText}>{children}</Text>
         </Pressable>
